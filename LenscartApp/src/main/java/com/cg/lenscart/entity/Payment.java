@@ -31,18 +31,18 @@ public class Payment implements Serializable {
 		
 		@OneToOne(cascade = CascadeType.ALL)
 		@JoinColumn(name = "order_id")
-		private Order order;
+		private Orders orders;
 		public Payment() {
 			
 		}
-		public Payment(int payment_id, String card_name, int cvv, Date expiry_date, long card_number,Order order) {
+		public Payment(int payment_id, String card_name, int cvv, Date expiry_date, long card_number,Orders orders) {
 			super();
 			this.payment_id = payment_id;
 			this.card_name = card_name;
 			this.cvv = cvv;
 			this.expiry_date = expiry_date;
 			this.card_number = card_number;
-			this.order=order;
+			this.orders=orders;
 		}
 		
 	

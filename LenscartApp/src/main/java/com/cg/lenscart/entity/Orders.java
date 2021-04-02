@@ -14,8 +14,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Order")
-public class Order implements Serializable{
+@Table(name="Orders")
+public class Orders implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,6 +25,57 @@ public class Order implements Serializable{
 	
 	@Column(name="total_cost")
 	private double total_cost;
+	
+	
+
+	public double getTotal_cost() {
+		return total_cost;
+	}
+
+	public void setTotal_cost(double total_cost) {
+		this.total_cost = total_cost;
+	}
+
+	public Date getDate_of_order() {
+		return date_of_order;
+	}
+
+	public void setDate_of_order(Date date_of_order) {
+		this.date_of_order = date_of_order;
+	}
+
+	public Date getExpected_date_of_arrival() {
+		return expected_date_of_arrival;
+	}
+
+	public void setExpected_date_of_arrival(Date expected_date_of_arrival) {
+		this.expected_date_of_arrival = expected_date_of_arrival;
+	}
+
+	public boolean isPayment_status() {
+		return payment_status;
+	}
+
+	public void setPayment_status(boolean payment_status) {
+		this.payment_status = payment_status;
+	}
+
+	public Cart getCart() {
+		return cart;
+	}
+
+	public void setCart(Cart cart) {
+		this.cart = cart;
+	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
 	@Column(name="date_of_order")
 	private Date date_of_order;
 	
@@ -43,12 +94,11 @@ public class Order implements Serializable{
 	@JoinColumn(name = "customer_id")
 	private Customer customer;
 	
-	public Order() {
+	public Orders() {
 		
 	}
 
-	public Order(int order_id, double total_cost,Date date_of_order, Date expected_date_of_arrival, boolean payment_status,Cart cart,Customer customer) {
-		super();
+	public Orders(int order_id, double total_cost,Date date_of_order, Date expected_date_of_arrival, boolean payment_status,Cart cart,Customer customer) {
 		this.order_id = order_id;
 		this.total_cost = total_cost;
 		this.date_of_order = date_of_order;
