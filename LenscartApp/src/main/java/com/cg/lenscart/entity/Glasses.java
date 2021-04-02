@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+//glasses entity
 @Entity
 @Table(name="Glasses")
 public class Glasses implements Serializable {
