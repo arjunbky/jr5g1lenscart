@@ -3,11 +3,14 @@ package com.cg.lenscart.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 @Entity
 @Table(name="Payment")
@@ -25,16 +28,21 @@ public class Payment implements Serializable {
 		private Date expiry_date;
 		@Column(name="card_number",length=16)
 		private long card_number;
+		
+		@OneToOne(cascade = CascadeType.ALL)
+		@JoinColumn(name = "order_id")
+		private Order order;
 		public Payment() {
 			
 		}
-		public Payment(int customer_id, String card_name, int cvv, Date expiry_date, long card_number) {
+		public Payment(int payment_id, String card_name, int cvv, Date expiry_date, long card_number,Order order) {
 			super();
-			this.payment_id = customer_id;
+			this.payment_id = payment_id;
 			this.card_name = card_name;
 			this.cvv = cvv;
 			this.expiry_date = expiry_date;
 			this.card_number = card_number;
+			this.order=order;
 		}
 		
 	
