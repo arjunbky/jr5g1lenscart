@@ -17,16 +17,22 @@ public class Order implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int order_id;
+	
 	@Column(name="item_type")
 	private String item_type;
+	
 	@Column(name="item_id")
 	private int item_id;
+	
 	@Column(name="description",length=100)
 	private String description;
+	
 	@Column(name="quantity")
 	private int quantity;
+	
 	@Column(name="price")
 	private double price;
+	
 	@Column(name="total_cost")
 	private double total_cost;
 	@Column(name="date_of_order")
@@ -34,6 +40,7 @@ public class Order implements Serializable{
 	
 	@Column(name="expected_date_of_arrival")
 	private Date expected_date_of_arrival;
+	
 	@Column(name="payment_status")
 	private boolean payment_status;
 	
