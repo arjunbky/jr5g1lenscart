@@ -17,10 +17,10 @@ public class Order implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long order_id;
-	@Column(name="date_of_order",length=20)
+	@Column(name="date_of_order")
 	private Date date_of_order;
 	
-	@Column(name="expected_date_of_arrival",length=20)
+	@Column(name="expected_date_of_arrival")
 	private Date expected_date_of_arrival;
 	
 	public Order() {

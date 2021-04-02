@@ -21,7 +21,7 @@ public class Payment implements Serializable {
 		private String card_name;
 		@Column(name="cvv",length=3)
 		private int cvv;
-		@Column(name="expiry_date",length=5)
+		@Column(name="expiry_date")
 		private Date expiry_date;
 		@Column(name="card_number",length=16)
 		private long card_number;
