@@ -1,12 +1,13 @@
 package com.cg.lenscart.entity;
 import java.io.Serializable;
 
-
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 @Entity
@@ -24,7 +25,8 @@ private String State;
 @Column(name="Pincode",length=6)
 private int Pincode;
 
-@OneToOne(mappedBy = "address")
+@OneToOne(cascade = CascadeType.ALL)
+@JoinColumn(name = "customer_id", referencedColumnName = "customer_id")
 private Customer customer;
 public Address () {
 		
