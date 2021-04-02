@@ -24,18 +24,18 @@ public class Glasses implements Serializable {
 	@Column(name="glass_type",length=50,nullable=false)
 	private String glass_type;
 	
-	@Column(name="glass_price")
-	private double glass_price;
+	@Column(name="glass_rate")
+	private double glass_rate;
 
 	public Glasses(){
 	}
 	
-	public Glasses(int glass_id,String glass_brand_name, float glass_power,String glass_type, double glass_price)
+	public Glasses(int glass_id,String glass_brand_name, float glass_power,String glass_type, double glass_rate)
 	{
 		this.glass_id = glass_id;
 		this. glass_brand_name= glass_brand_name;
 		this. glass_power = glass_power ;
 		this.glass_type = glass_type;
-		this.glass_price = glass_price;
+		this.glass_rate = glass_rate;
 	}
 }
