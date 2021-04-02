@@ -24,7 +24,7 @@ private String City;
 private String State;
 @Column(name="Pincode",length=6)
 private int Pincode;
-
+//one to one mapping for customer
 @OneToOne(cascade = CascadeType.ALL)
 @JoinColumn(name = "customer_id", referencedColumnName = "customer_id")
 private Customer customer;

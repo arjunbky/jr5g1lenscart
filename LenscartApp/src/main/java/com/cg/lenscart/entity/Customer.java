@@ -36,7 +36,7 @@ public class Customer implements Serializable {
 	@Column(length = 20)
 	private String password;
 	
-	
+	//mapped with address
 
 	public int getCustomer_id() {
 		return customer_id;
