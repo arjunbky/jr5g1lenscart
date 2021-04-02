@@ -7,7 +7,7 @@ public class LensCartApplication {
 		//testing push from another computer
 		//TEST
 		
-
+System.out.println("hello hi");
 	}
 
 }
