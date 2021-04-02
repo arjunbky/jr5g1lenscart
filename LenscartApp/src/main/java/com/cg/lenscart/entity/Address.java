@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 @Entity
 @Table(name="Address")
@@ -22,6 +23,9 @@ private String City;
 private String State;
 @Column(name="Pincode",length=6)
 private int Pincode;
+
+@OneToOne(mappedBy = "address")
+private Customer customer;
 public Address () {
 		
 	}
