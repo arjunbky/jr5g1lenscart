@@ -13,7 +13,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Address")
 public class Address  implements Serializable    { 
+
+
+
+	private static final long serialVersionUID = 1L;
+
 @Id
+
 @Column(name=" House_number",length=5)
 private String House_number;
 @Column (name=" Street_name",length=20)
