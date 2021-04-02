@@ -2,11 +2,14 @@ package com.cg.lenscart.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -32,6 +35,9 @@ public class Customer implements Serializable {
 	
 	@Column(length = 20)
 	private String password;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "House_number", referencedColumnName = "House_number")
 
 	public int getCustomer_id() {
 		return customer_id;
