@@ -6,7 +6,7 @@ public class LensCartApplication {
 		// TODO Auto-generated method stub
 		//testing push from another computer
 		
-System.out.println("hello");
+System.out.println("hello hi");
 	}
 
 }
