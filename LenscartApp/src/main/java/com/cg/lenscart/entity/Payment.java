@@ -16,7 +16,7 @@ public class Payment implements Serializable {
 		private static final long serialVersionUID = 1L;
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
-		private int customer_id;
+		private int payment_id;
 		@Column(name="card_name",length=30)
 		private String card_name;
 		@Column(name="cvv",length=3)
@@ -30,7 +30,7 @@ public class Payment implements Serializable {
 		}
 		public Payment(int customer_id, String card_name, int cvv, Date expiry_date, long card_number) {
 			super();
-			this.customer_id = customer_id;
+			this.payment_id = customer_id;
 			this.card_name = card_name;
 			this.cvv = cvv;
 			this.expiry_date = expiry_date;
