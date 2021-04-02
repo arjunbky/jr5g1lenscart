@@ -37,7 +37,8 @@ public class Customer implements Serializable {
 	private String password;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "House_number", referencedColumnName = "House_number")
+    @JoinColumn(name = "House_number")
+    private Address address;
 
 	public int getCustomer_id() {
 		return customer_id;
