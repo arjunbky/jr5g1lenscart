@@ -30,8 +30,7 @@ private String City;
 private String State;
 @Column(name="Pincode",length=6)
 private int Pincode;
-//one to one mapping for customer and address
-//only unidirectional
+
 public Address () {
 		
 	}
