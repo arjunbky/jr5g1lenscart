@@ -3,6 +3,8 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
@@ -11,7 +13,7 @@ public class Frames  implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@Id
-	@Column(name="frame_id",length=20)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int frame_id;
 	
 	@Column(name="frame_shape",length=50,nullable=false)
