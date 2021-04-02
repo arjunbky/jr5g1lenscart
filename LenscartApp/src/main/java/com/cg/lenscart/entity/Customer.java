@@ -12,38 +12,29 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Customer")
 public class Customer implements Serializable {
-	
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int customer_id;
 	
-	@Column(length = 30)
+	@Column(length = 15)
 	private String first_name;
 	
-	@Column(length = 30)
+	@Column(length = 15)
 	private String last_name;
 	
-	@Column(length = 30)
+	@Column(length = 10)
 	private long phone_number;
 	
 	@Column(length = 30)
 	private String email_id;
 	
 	@Column(length = 20)
-	private int password;
+	private String password;
 
 	public int getCustomer_id() {
 		return customer_id;
-	}
-
-	public int getPassword() {
-		return password;
-	}
-
-	public void setPassword(int password) {
-		this.password = password;
 	}
 
 	public void setCustomer_id(int customer_id) {
@@ -80,6 +71,14 @@ public class Customer implements Serializable {
 
 	public void setEmail_id(String email_id) {
 		this.email_id = email_id;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 }
