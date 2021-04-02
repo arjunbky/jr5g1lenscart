@@ -38,7 +38,6 @@ public class Customer implements Serializable {
 	
 	@OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "House_number", referencedColumnName = "House_number")
-	//comment
 
 	public int getCustomer_id() {
 		return customer_id;
