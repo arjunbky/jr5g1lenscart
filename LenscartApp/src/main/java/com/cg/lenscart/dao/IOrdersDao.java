@@ -6,4 +6,6 @@ import com.cg.lenscart.entity.Orders;
 
 public interface IOrdersDao extends JpaRepository<Orders, Integer>{
 
+	Orders getOrdersByCartId(int cart_id);
+
 }
