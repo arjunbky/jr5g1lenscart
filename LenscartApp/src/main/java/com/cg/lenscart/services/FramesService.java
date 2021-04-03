@@ -10,7 +10,7 @@ import com.cg.lenscart.dao.IFramesDao;
 import com.cg.lenscart.entity.Frames;
 
 @Service
-public class FramesService {
+public class FramesService implements IFramesService {
 	@Autowired
 	IFramesDao framesDao;
 	public void addFrames(Frames frames) {
