@@ -1,6 +1,5 @@
 package com.cg.lenscart.services;
 
-package com.cg.lenscart.services;
 
 import java.util.List;
 
@@ -14,7 +13,7 @@ import com.cg.lenscart.entity.Frames;
 import com.cg.lenscart.entity.Lenses;
 
 @Service
-public class CartServices {
+public class CartService {
 	@Autowired
 	ICartDao dao;
 	@Autowired
