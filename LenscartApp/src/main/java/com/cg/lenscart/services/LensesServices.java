@@ -10,7 +10,7 @@ import com.cg.lenscart.entity.Frames;
 import com.cg.lenscart.entity.Lenses;
 //lenses services
 @Service
-public class LensesServices {
+public class LensesServices implements ILensesService{
 	@Autowired
 	ILensesDao dao;
 	public void addLenses(Lenses lenses) {

@@ -11,7 +11,7 @@ import com.cg.lenscart.dao.IOrdersDao;
 import com.cg.lenscart.entity.Orders;
 
 @Service
-public class OrdersService {
+public class OrdersService implements IOrdersService {
 	@Autowired
 	IOrdersDao ordersDao;
 	
