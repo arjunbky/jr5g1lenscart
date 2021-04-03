@@ -28,6 +28,7 @@ public class LensesServices {
 		}
 		return "Lens not found";
 	}
+	//modify or update
 	public String modifyLenses(int lens_id,Lenses lens) {
 		if(dao.existsById(lens_id)) {
 			Lenses lenses =dao.findById(lens_id).get();
