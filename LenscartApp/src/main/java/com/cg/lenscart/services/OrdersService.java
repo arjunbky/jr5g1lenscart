@@ -34,5 +34,8 @@ public class OrdersService {
 		return ordersDao.getOrdersByCartId(cart_id);
 		
 	}
+	public Orders getCustomerDetails(int customer_id) {
+		return ordersDao.getCustomerDetails(customer_id);
+	}
 	
 }
