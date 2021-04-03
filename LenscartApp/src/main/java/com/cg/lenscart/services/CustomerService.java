@@ -14,33 +14,33 @@ import com.cg.lenscart.entity.Customer;
 @Service
 public class CustomerService {
 	@Autowired
-	ICustomerDao dao;
+	ICustomerDao customerDao;
 	@Autowired
-	IAddressDao aDao;
+	IAddressDao addressDao;
 	public void addCustomer(Customer customer) {
-		dao.save(customer);  
+		customerDao.save(customer);  
 	}
 	public List<Customer> getAllCustomer(){
-		List<Customer> custList=dao.findAll();
+		List<Customer> custList=customerDao.findAll();
 		return custList;
 	}
 	public String deleteCustomer(int customer_id) {
-		if(dao.existsById(customer_id)) {
-			dao.deleteById(customer_id);
+		if(customerDao.existsById(customer_id)) {
+			customerDao.deleteById(customer_id);
 			return "Customer Deleted";
 		}
 		return "Customer not found";
 	}
 	public String modifyCustomer(int customer_id,Customer cust) {
-		if(dao.existsById(customer_id)) {
-			Customer customer=dao.findById(customer_id).get();
+		if(customerDao.existsById(customer_id)) {
+			Customer customer=customerDao.findById(customer_id).get();
 			customer.setFirst_name(cust.getFirst_name());
 			customer.setLast_name(cust.getLast_name());
 			customer.setPhone_number(cust.getPhone_number());
 			customer.setEmail_id(cust.getEmail_id());
 			customer.setPassword(cust.getPassword());
-			aDao.save(cust.getAddress());
-			dao.save(customer);
+			addressDao.save(cust.getAddress());
+			customerDao.save(customer);
 			return "Customer Updated";
 		}
 		return "Customer not found";
