@@ -3,7 +3,7 @@ package com.cg.lenscart.services;
 import java.util.List;
 
 import com.cg.lenscart.entity.Lenses;
-
+//lense service
 public interface ILensesService {
 	public void addLenses(Lenses lenses);
 	public List<Lenses> getAllLenses();
