@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.cg.lenscart.dao.ILensesDao;
 import com.cg.lenscart.entity.Frames;
 import com.cg.lenscart.entity.Lenses;
-
+//lenses services
 @Service
 public class LensesServices {
 	@Autowired
@@ -28,7 +28,7 @@ public class LensesServices {
 		}
 		return "Lens not found";
 	}
-	//modify or update
+	
 	public String modifyLenses(int lens_id,Lenses lens) {
 		if(dao.existsById(lens_id)) {
 			Lenses lenses =dao.findById(lens_id).get();
