@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cg.lenscart.dao.ILensesDao;
-import com.cg.lenscart.entity.Frames;
 import com.cg.lenscart.entity.Lenses;
 //lenses services
 @Service

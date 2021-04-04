@@ -31,19 +31,19 @@ private Frames frames;
 private Lenses lenses;
 
 
-public Cart(int product_id, int quantity, float price, Frames frames, Lenses lenses) {
+public Cart(int cart_id, int quantity, float price, Frames frames, Lenses lenses) {
 	super();
-	this.cart_id = product_id;
+	this.cart_id = cart_id;
 	this.quantity = quantity;
 	this.price = price;
 	this.frames = frames;
 	this.lenses = lenses;
 }
-public int getProduct_id() {
+public int getCart_id() {
 	return cart_id;
 }
-public void setProduct_id(int product_id) {
-	this.cart_id = product_id;
+public void setCart_id(int cart_id) {
+	this.cart_id = cart_id;
 }
 public int getQuantity() {
 	return quantity;

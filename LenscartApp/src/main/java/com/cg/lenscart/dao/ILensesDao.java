@@ -6,4 +6,6 @@ import com.cg.lenscart.entity.Lenses;
 
 public interface ILensesDao extends JpaRepository<Lenses, Integer> {
 
+
+
 }

@@ -68,7 +68,7 @@ public class Orders implements Serializable{
 		this.cart = cart;
 	}
 
-	public Customer getCustomer() {
+	public Customer getCustomer(int customer_id) {
 		return customer;
 	}
 
@@ -98,6 +98,18 @@ public class Orders implements Serializable{
 		
 	}
 
+	public int getOrder_id() {
+		return order_id;
+	}
+
+	public void setOrder_id(int order_id) {
+		this.order_id = order_id;
+	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
 	public Orders(int order_id, double total_cost,Date date_of_order, Date expected_date_of_arrival, boolean payment_status,Cart cart,Customer customer) {
 		this.order_id = order_id;
 		this.total_cost = total_cost;
@@ -107,6 +119,8 @@ public class Orders implements Serializable{
 		this.cart=cart;
 		this.customer=customer;
 	}
+
+	
 
 	
 	

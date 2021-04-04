@@ -34,8 +34,10 @@ public class OrdersService implements IOrdersService {
 		return ordersDao.getOrdersByCartId(cart_id);
 		
 	}
-	public Orders getCustomerDetails(int customer_id) {
-		return ordersDao.getCustomerDetails(customer_id);
-	}
+//	public List<Orders> getCustomerDetails(int customer_id) {
+//		List<Orders> orderList=ordersDao.findAll();
+//		return orderList;
+//	}
+	
 	
 }

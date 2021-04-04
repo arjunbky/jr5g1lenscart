@@ -12,7 +12,7 @@ import com.cg.lenscart.entity.Customer;
 
 
 @Service
-public class CustomerService {
+public class CustomerService implements ICustomerService {
 	@Autowired
 	ICustomerDao customerDao;
 	@Autowired
