@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cg.lenscart.dto.FramesDto;
 import com.cg.lenscart.entity.Frames;
 import com.cg.lenscart.services.FramesService;
 
@@ -25,8 +26,8 @@ public class FramesController {
 		FramesService service;
 		
 		@PostMapping("/insertframes")
-		public ResponseEntity<String> addFrames(@RequestBody Frames frames){
-			service.addFrames(frames);
+		public ResponseEntity<String> addFrames(@RequestBody FramesDto dto){
+			service.addFrames(dto);
 			return new ResponseEntity<String>("Frames Added",HttpStatus.OK);
 		}
 		@GetMapping
