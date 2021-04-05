@@ -25,7 +25,7 @@ public class FramesController {
 		FramesService service;
 		
 		@PostMapping("/insertframes")
-		public ResponseEntity<String> addDept(@RequestBody Frames frames){
+		public ResponseEntity<String> addFrames(@RequestBody Frames frames){
 			service.addFrames(frames);
 			return new ResponseEntity<String>("Frames Added",HttpStatus.OK);
 		}
