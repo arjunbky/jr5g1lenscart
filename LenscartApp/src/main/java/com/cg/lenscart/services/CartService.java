@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.cg.lenscart.dao.ICartDao;
 import com.cg.lenscart.dao.IFramesDao;
 import com.cg.lenscart.dao.ILensesDao;
+import com.cg.lenscart.entity.Cart;
 import com.cg.lenscart.entity.Frames;
 import com.cg.lenscart.entity.Lenses;
 
@@ -50,7 +51,24 @@ public class CartService implements ICartService {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	public String deleteCart(int cart_id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public void addCart(Cart cart) {
+		// TODO Auto-generated method stub
+		
+	}
+	public List<Cart> getAllCart() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public String modifyCart(int cart_id, Cart cart) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	}
 	
 	
 	
-}
+

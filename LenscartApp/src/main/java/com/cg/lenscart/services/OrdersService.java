@@ -38,6 +38,14 @@ public class OrdersService implements IOrdersService {
 //		List<Orders> orderList=ordersDao.findAll();
 //		return orderList;
 //	}
+	public String modifyOrder(int order_id, Orders order) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public String deleteOrder(int order_id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 }

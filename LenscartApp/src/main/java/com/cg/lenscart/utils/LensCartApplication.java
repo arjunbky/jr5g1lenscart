@@ -1,4 +1,4 @@
-package com.cg.lenscart;
+package com.cg.lenscart.utils;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
