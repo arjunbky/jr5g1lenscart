@@ -6,15 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cg.lenscart.dao.ILensesDao;
+import com.cg.lenscart.dto.LensesDto;
+import com.cg.lenscart.entity.Frames;
 import com.cg.lenscart.entity.Lenses;
 //lenses services
 @Service
 public class LensesServices implements ILensesService{
 	@Autowired
 	ILensesDao dao;
-	public void addLenses(Lenses lenses) {
-		dao.save(lenses);
-	}
+	//public void addLenses(LensesDto dto) {
+	//	dao.save(lenses);
+//	}
+	
 	public List<Lenses> getAllLenses(){
 		List<Lenses> lensList=dao.findAll();
 		return lensList;
@@ -38,6 +41,16 @@ public class LensesServices implements ILensesService{
 			return "Lenses updated";
 		}
 		return "Lens not found";
+	}
+	public void addLenses(LensesDto dto) {
+		Lenses lens=new Lenses();
+		lens.setLens_id(dto.getLens_id());
+		lens.setLens_power(dto.getLens_power());
+		lens.setLens_brand(dto.getLens_brand());
+		lens.setLens_type(dto.getLens_type());
+		lens.setLens_price(dto.getLens_price());
+		dao.save(lens);
+		
 	}
 
 }

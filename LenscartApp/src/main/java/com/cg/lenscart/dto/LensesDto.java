@@ -13,6 +13,14 @@ public class LensesDto {
 	public float getLens_power() {
 		return lens_power;
 	}
+	public LensesDto(int lens_id, float lens_power, String lens_brand, String lens_type, double lens_price) {
+		super();
+		this.lens_id = lens_id;
+		this.lens_power = lens_power;
+		this.lens_brand = lens_brand;
+		this.lens_type = lens_type;
+		this.lens_price = lens_price;
+	}
 	public void setLens_power(float lens_power) {
 		this.lens_power = lens_power;
 	}

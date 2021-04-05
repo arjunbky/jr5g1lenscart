@@ -8,9 +8,6 @@ import com.cg.lenscart.dao.IAddressDao;
 import com.cg.lenscart.dao.ICustomerDao;
 import com.cg.lenscart.entity.Customer;
 
-
-
-
 @Service
 public class CustomerService implements ICustomerService {
 	@Autowired
