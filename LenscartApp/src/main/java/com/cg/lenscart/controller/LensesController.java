@@ -25,8 +25,8 @@ public class LensesController {
 	LensesServices service;
 	
 	@PostMapping("/insertlenses")
-	public ResponseEntity<String> addLenses(@RequestBody Lenses lens){
-		service.addLenses(lens);
+	public ResponseEntity<String> addLenses(@RequestBody Lenses lenses){
+		service.addLenses(lenses);
 		return new ResponseEntity<String>("Frames Added",HttpStatus.OK);
 	}
 	@GetMapping
