@@ -25,7 +25,7 @@ public class LensesController {
 	LensesServices service;
 	
 	@PostMapping("/insertlenses")
-	public ResponseEntity<String> addDept(@RequestBody Lenses lens){
+	public ResponseEntity<String> addLenses(@RequestBody Lenses lens){
 		service.addLenses(lens);
 		return new ResponseEntity<String>("Frames Added",HttpStatus.OK);
 	}
@@ -36,7 +36,7 @@ public class LensesController {
 	}
 	
 	@DeleteMapping("/deletelenses")
-	public ResponseEntity<String> deleteFrames(@RequestBody int lens_id){
+	public ResponseEntity<String> deleteLenses(@RequestBody int lens_id){
 		String str=service.deleteLenses(lens_id);
 		return new ResponseEntity<String>(str,HttpStatus.OK);
 	}
