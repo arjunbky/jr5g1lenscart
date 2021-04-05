@@ -14,15 +14,25 @@ import com.cg.lenscart.entity.Lenses;
 public class LensesServices implements ILensesService{
 	@Autowired
 	ILensesDao dao;
-	//public void addLenses(LensesDto dto) {
-	//	dao.save(lenses);
-//	}
-	
-	public List<Lenses> getAllLenses(){
+
+	@Override
+	public void addLenses(Lenses lenses) {
+		Lenses lens=new Lenses();
+		lens.setLens_id( lenses.getLens_id());
+		lens.setLens_power( lenses.getLens_power());
+		lens.setLens_brand( lenses.getLens_brand());
+		lens.setLens_type( lenses.getLens_type());
+		lens.setLens_price( lenses.getLens_price());
+		dao.save(lens);
+	}
+
+	@Override
+	public List<Lenses> getAllLenses() {
 		List<Lenses> lensList=dao.findAll();
 		return lensList;
 	}
-	
+
+	@Override
 	public String deleteLenses(int lens_id) {
 		if(dao.existsById(lens_id)) {
 			dao.deleteById(lens_id);
@@ -30,8 +40,9 @@ public class LensesServices implements ILensesService{
 		}
 		return "Lens not found";
 	}
-	
-	public String modifyLenses(int lens_id,Lenses lens) {
+
+	@Override
+	public String modifyLenses(int lens_id, Lenses lens) {
 		if(dao.existsById(lens_id)) {
 			Lenses lenses =dao.findById(lens_id).get();
 			lenses.setLens_power(lens.getLens_power());
@@ -42,17 +53,5 @@ public class LensesServices implements ILensesService{
 		}
 		return "Lens not found";
 	}
-	public void addLenses(LensesDto dto) {
-		Lenses lens=new Lenses();
-		lens.setLens_id(dto.getLens_id());
-		lens.setLens_power(dto.getLens_power());
-		lens.setLens_brand(dto.getLens_brand());
-		lens.setLens_type(dto.getLens_type());
-		lens.setLens_price(dto.getLens_price());
-		dao.save(lens);
-		
-	}
-		
-	}
-
-
+}
+	
