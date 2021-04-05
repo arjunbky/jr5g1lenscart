@@ -6,6 +6,13 @@ public class FramesDto {
 	private String frame_colour;
 	private String frame_brand;
 	private double frame_price;
+	public FramesDto(int frame_id, String frame_shape, String frame_colour, String frame_brand, double frame_price) {
+		this.frame_id = frame_id;
+		this.frame_shape = frame_shape;
+		this.frame_colour = frame_colour;
+		this.frame_brand = frame_brand;
+		this.frame_price = frame_price;
+	}
 	public int getFrame_id() {
 		return frame_id;
 	}
