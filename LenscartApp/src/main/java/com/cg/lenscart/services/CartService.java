@@ -23,13 +23,12 @@ public class CartService implements ICartService {
 	ILensesDao lensesdao;
 	@Override
 	public void addFrames(Frames frames) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	@Override
 	public List<Frames> getAllFrames() {
-		// TODO Auto-generated method stub
-		return null;
+		return framesdao.findAll();
 	}
 	@Override
 	public void addLenses(Lenses lenses) {
@@ -39,7 +38,7 @@ public class CartService implements ICartService {
 	@Override
 	public List<Lenses> getAllLenses() {
 		// TODO Auto-generated method stub
-		return null;
+		return lensesdao.findAll();
 	}
 	@Override
 	public String deleteFrames(Frames frames) {

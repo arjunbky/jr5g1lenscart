@@ -1,4 +1,4 @@
-package com.cg.lenscart.entity;
+ package com.cg.lenscart.entity;
 import java.io.Serializable;
 
 import javax.persistence.CascadeType;
@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import com.cg.lenscart.dto.CartDto;
 @Entity
 @Table(name="Cart")
 public class Cart  implements Serializable    { 
@@ -39,6 +41,15 @@ public Cart(int cart_id, int quantity, float price, Frames frames, Lenses lenses
 	this.frames = frames;
 	this.lenses = lenses;
 }
+
+public Cart(CartDto cartDto,int cart_id, int quantity, double price, Frames frames, Lenses lenses) {
+	this.cart_id = cart_id;
+	this.quantity = quantity;
+	this.price = price;
+	this.frames = frames;
+	this.lenses = lenses;
+}
+
 public int getCart_id() {
 	return cart_id;
 }

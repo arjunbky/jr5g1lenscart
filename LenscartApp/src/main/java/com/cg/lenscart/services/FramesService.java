@@ -14,20 +14,20 @@ import com.cg.lenscart.entity.Frames;
 public class FramesService implements IFramesService {
 	@Autowired
 	IFramesDao framesDao;
-//	public void addFrames(Frames frames) {
-//		framesDao.save(frames);
-//	}
-	public void addFrames(FramesDto dto) {
-		Frames frames=new Frames();
-		frames.setFrame_id(dto.getFrame_id());
-		frames.setFrame_colour(dto.getFrame_colour());
-		frames.setFrame_brand(dto.getFrame_brand());
-		frames.setFrame_shape(dto.getFrame_shape());
-		frames.setFrame_price(dto.getFrame_price());
-		framesDao.save(frames);
-		
-		
+	public void addFrames(Frames frames) {
+	framesDao.save(frames);
 	}
+//	public void addFrames(FramesDto dto) {
+//		Frames frames=new Frames();
+//		frames.setFrame_id(dto.getFrame_id());
+//		frames.setFrame_colour(dto.getFrame_colour());
+//		frames.setFrame_brand(dto.getFrame_brand());
+//		frames.setFrame_shape(dto.getFrame_shape());
+//		frames.setFrame_price(dto.getFrame_price());
+//		framesDao.save(frames);
+//		
+		
+	
 	public List<Frames> getAllFrames(){
 		List<Frames> framesList=framesDao.findAll();
 		return framesList;
@@ -51,6 +51,8 @@ public class FramesService implements IFramesService {
 		}
 		return "Frame not found";
 	}
+
+
 
 
 }
