@@ -47,8 +47,12 @@ public class CartService implements ICartService {
 	}
 	@Override
 	public String deleteLenses(Lenses lenses) {
-		// TODO Auto-generated method stub
-		return null;
+		if(dao.existsById(lens_id)) {
+			dao.deleteById(lens_id);
+			return "Lens removed";
+		}
+		return "Lens not found";
+	}
 	}
 	public String deleteCart(int cart_id) {
 		// TODO Auto-generated method stub
