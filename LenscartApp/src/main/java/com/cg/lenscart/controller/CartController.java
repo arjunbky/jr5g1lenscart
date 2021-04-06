@@ -37,11 +37,11 @@ public class CartController {
 		String str=service.deleteCart(cart_id);
 		return new ResponseEntity<String>(str,HttpStatus.OK);
 	}
-	@PutMapping("/updatecart/{code}")
-	public ResponseEntity<String> modifyCart(@PathVariable int cart_id,@RequestBody Cart cart){
-		String str=service.modifyCart(cart_id, cart);
-		return new ResponseEntity<String>(str,HttpStatus.OK);
-	}
+//	@PutMapping("/updatecart/{code}")
+//	public ResponseEntity<String> modifyCart(@PathVariable int cart_id,@RequestBody Cart cart){
+//		String str=service.modifyCart(cart_id, cart);
+//		return new ResponseEntity<String>(str,HttpStatus.OK);
+//	}
 
 
 }

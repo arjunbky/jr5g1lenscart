@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cg.lenscart.dao.IFramesDao;
-import com.cg.lenscart.dto.FramesDto;
 import com.cg.lenscart.entity.Frames;
 
 @Service
